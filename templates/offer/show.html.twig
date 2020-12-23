@@ -1,0 +1,39 @@
+{% extends 'public/layout.html.twig' %}
+
+{% block title %}Offer{% endblock %}
+
+{% block body %}
+    <h1>Offer</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ offer.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ offer.titre }}</td>
+            </tr>
+            <tr>
+                <th>Textintro</th>
+                <td>{{ offer.textintro }}</td>
+            </tr>
+            <tr>
+                <th>Textoffre</th>
+                <td>{{ offer.textoffre }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ offer.prix }}</td>
+            </tr>
+            <tr>
+                <th></th>
+                <td><a href="{{ path('subscribe_to_offer', {'id': offer.id})}}">Souscrire à cette offre.</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('offer_index') }}">back to list</a>
+
+{% endblock %}

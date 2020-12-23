@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Espace Agent{% endblock %}
+
+{% block logo %}
+    <a class="navbar-brand" href="{{ path('agent')}}">
+        <img src="{{asset('images/logo.png')}}" style="height: 110px;" alt="image">
+    </a>
+{% endblock %}
+
+
+
+{% block layout %}
+
+    <!-- Start header -->
+    <div class="section first">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {% block body %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
